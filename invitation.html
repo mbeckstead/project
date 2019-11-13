@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invitation Page</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+<!--The following "script" element addresses where are all the commands are coming from in order for the page to properly function-->
+    <script type=text/javascript src="web.js"></script>
+</head>
+
+<!--This "onload" prompt/command will initiate the entire flow of the page-->
+<body onload="invitation()">
+    <header>
+        <div class="top">
+            <a class="logo" href="index.html">CapellaVolunteers<span class="dotcom">.org</span></a>
+        </div>
+        <nav>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="invitation.html" class="active">Invitation</a>
+                </li>
+                <li><a href="gallery.html">Gallery</a>
+                </li>
+                <li><a href="registration.html">Registration</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    
+<!--Below is the code used for identifying the form-->
+    <section id="pageForm">
+        <form id="invitation" action="#">
+
+            <label1>Please refesh browser if a different amount of recipients is needed</label1><br><br>
+
+<!--The following "label" and "input" elements will create text fields for the number of user defined recipients-->
+            <label for="numberRecipients">Number of Recipients:</label>
+            <input type="text" name="numberRecipients" id="numrecip" 
+                   placeholder= "Enter Number of Recipients and press ENTER" />
+
+<!--This "div" element gathers all the data associated with "information" as defined in the "web" javascript-->
+            <div id="information"></div>
+            
+            <label for="organizationName">Organization name:</label>
+            <input type="text" name="organizationName" id="organization" placeholder="Enter your Organization Name" />
+
+            <label for="eventDate">Event Date:</label>
+            <input type="text" name="eventDate" id="date" placeholder="Enter your Event Date" />
+
+            <label for="websiteURL">URL:</label>
+            <input type="text" name="websiteURL" id="site" placeholder="Enter your Website URL" />
+
+            <label for="hostName">Host name:</label>
+            <input type="text" name="hostName" id="host" placeholder="Host Name" /><br><br>
+            
+            <label1>Please press the SUBMIT button only once or it will continue to populate duplicate invitations</label1><br><br>
+
+            <input type="button" value="Submit" onclick="assignvar()">
+        </form>
+    </section>
+
+<!--This is the location where the generated paragraphs, associated with information related to "iparagraph" in the "web.js", will appear-->    
+    <article id="placeholderContent">
+        <div id="iparagraph"></div>
+    </article>
